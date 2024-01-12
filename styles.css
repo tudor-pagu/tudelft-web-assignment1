@@ -110,6 +110,7 @@ body {
 .login-form {
     display : flex;
     flex-direction: column;
+    gap : 10px; 
 }
 .login-form label {
     font-weight: bold;
@@ -122,4 +123,20 @@ body {
     height : 35px;
     padding : 5px;
     font-size : 20px;
+}
+
+.login-container>h1 {
+    font-size : 40px;
+    margin-bottom : 10px;
+}
+
+.login-form>button {
+    padding : 10px;
+    background-color: var(--dark-orange);
+    border : none;
+    border-radius: 10px;
+    width: 150px;
+    align-self: center;
+    font-weight: bold;
+    font-size :1.1rem
 }
