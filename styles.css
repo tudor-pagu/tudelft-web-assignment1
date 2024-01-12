@@ -1,0 +1,125 @@
+:root {
+    --main-yellow : #FFE458;
+    --background-yellow : #FFF6D6;
+    --gray : #EAEAEA;
+    --dark-grey : #D9D9D9;
+    --orange : #FEC600;
+    --dark-orange : #E8B500;
+}
+
+body {
+    font-family : 'Inter';
+    background-color: var(--background-yellow);
+}
+.header-container {
+    padding : 20px;
+    background-color: var(--main-yellow);
+    display : flex;
+    align-items: center;
+    gap : 10px;
+}
+.header-container a {
+    color : black;
+}
+.header-spacer {
+    flex : 1;
+}
+.header-friends {
+    margin-left:auto;
+}
+.header-container>h1 {
+    margin : 0;
+    font-size : 30px;
+}
+body {
+    padding : 0;
+    margin : 0;
+}
+
+.search-container {
+    background-color: var(--main-yellow);
+    padding : 20px;
+}
+.home-container {
+    padding : 40px 0px;
+    display: flex;
+    justify-content: center;
+}
+.home-list-container {
+    display : flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap : 45px;
+}
+.search-box {
+    background-color: var(--gray);
+    flex : 1;
+}
+.search-icon {
+    background-color: var(--dark-grey);
+    width : 35px;
+    height : 35px;
+    padding : 10px;
+}
+.search-box-wrapper {
+    display : flex;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.movie-container {
+    background-color: var(--main-yellow);
+    padding : 30px;
+    display: flex;
+    flex-direction: column;
+    gap : 25px;
+}
+.movie-wrapper {
+    background-color: var(--orange);
+    padding : 15px;
+    display : flex;
+    gap : 8px;
+}
+.movie-name {
+    font-weight: bold;
+    font-size : 18px;
+}
+.movie-picture {
+    background-color: lightgray;
+    height : 81px;
+    width : 62px;
+}
+.movie-button {
+    border : none;
+    background-color: var(--dark-orange);
+    align-self : flex-end;
+    padding : 10px;
+}
+.login-container {
+    background-color: var(--main-yellow);
+    padding : 35px;
+    display : flex;
+    align-items: center;
+    flex-direction: column;
+}
+.login-picture {
+    width : 150px;
+    height : 150px;
+    opacity: 15%;
+}
+.login-form {
+    display : flex;
+    flex-direction: column;
+}
+.login-form label {
+    font-weight: bold;
+}
+
+.login-form input {
+    border : 0px;
+    background-color: var(--gray);
+    width: 250px;
+    height : 35px;
+    padding : 5px;
+    font-size : 20px;
+}
