@@ -32,7 +32,7 @@ searchForm.addEventListener("submit", (e) => {
     e.preventDefault()
     let searchText = encodeURIComponent(getSearchText())
     console.log(searchText)
-    let apiUrl = `http://www.omdbapi.com/?apikey=${APIKEY}&s=${searchText}`
+    let apiUrl = `https://www.omdbapi.com/?apikey=${APIKEY}&s=${searchText}`
     console.log(apiUrl)
     fetch(apiUrl).then((response) => {
         return response.json()
