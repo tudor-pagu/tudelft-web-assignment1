@@ -7,6 +7,9 @@
     --dark-orange : #E8B500;
 }
 
+* {
+    box-sizing: border-box;
+}
 body {
     font-family : 'Inter';
     background-color: var(--background-yellow);
@@ -61,8 +64,8 @@ body {
 }
 .search-icon {
     background-color: var(--dark-grey);
-    width : 35px;
-    height : 35px;
+    width : 50px;
+    height : 50px;
     padding : 10px;
 }
 .search-box-wrapper {
@@ -90,14 +93,16 @@ body {
 }
 .movie-picture {
     background-color: lightgray;
-    height : 81px;
-    width : 62px;
+    height : 140px;
+    width : 120px;
+    object-fit : cover;
 }
 .movie-button {
     border : none;
     background-color: var(--dark-orange);
     align-self : flex-end;
     padding : 10px;
+    margin-left : auto;
 }
 .login-container {
     background-color: var(--main-yellow);
@@ -143,5 +148,21 @@ body {
     width: 150px;
     align-self: center;
     font-weight: bold;
-    font-size :1.1rem
+    font-size :rem
+}
+
+.search-box-wrapper button {
+    padding:0;
+    border:0;
+    cursor: pointer;
+    width : 50px;
+    height : 50px;
+}
+
+.search-box-wrapper input {
+    border : 0;
+    margin : 0;
+    padding : 0;
+    padding : 5px;
+    font-size: 1.2rem;
 }

@@ -8,6 +8,7 @@
     <!-- This is for the Inter font-->
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <script src="index.js" defer></script>
 
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -25,10 +26,12 @@
         <div class="home-list-container">
             <article class="search-container">
                 <h1 class="search-prompt">What interests you today?</h1>
-                <div class="search-box-wrapper">
-                    <div class="search-box"></div>
-                    <img class="search-icon" src="search.png"></img>
-                </div>
+                <form class="search-box-wrapper">
+                    <input class="search-box" id="search-input"></input>
+                    <button id="search-button">
+                        <img class="search-icon" src="search.png"></img>
+                    </button>
+                </form>
             </article>
             <article class="movie-container">
                 <div class="movie-wrapper">
