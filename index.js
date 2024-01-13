@@ -22,7 +22,7 @@ function movieElementFactory(picture, title) {
     let movieButton = document.createElement("button")
     movieButton.classList.add("movie-button")
     movieButton.textContent = "Add to list"
-    
+
     movieWrapper.appendChild(moviePicture)
     movieWrapper.appendChild(movieName)
     movieWrapper.appendChild(movieButton)
@@ -30,18 +30,25 @@ function movieElementFactory(picture, title) {
 }
 searchForm.addEventListener("submit", (e) => {
     e.preventDefault()
-    let searchText = getSearchText()
+    let searchText = encodeURIComponent(getSearchText())
     console.log(searchText)
-    let apiUrl = encodeURI(`http://www.omdbapi.com/?apikey=${APIKEY}&s=${searchText}`)
+    let apiUrl = `https://www.omdbapi.com/?apikey=${APIKEY}&s=${searchText}`
+    console.log(apiUrl)
     fetch(apiUrl).then((response) => {
         return response.json()
     }).then(data => {
         let search = data["Search"]
-        movieContainer.textContent = ""
-        search.forEach(result => {
-            movieContainer.appendChild(movieElementFactory(result["Poster"], result["Title"]))
-        })
+        if (search === undefined) {
+            movieContainer.textContent = ""
+            let element = document.createElement('h1')
+            element.textContent = "No movies found"
+            movieContainer.appendChild(element)
+        } else {
+            movieContainer.textContent = ""
+            search.forEach(result => {
+                movieContainer.appendChild(movieElementFactory(result["Poster"], result["Title"]))
+            })
+        }
     })
 })
-console.log(searchButton)
 
